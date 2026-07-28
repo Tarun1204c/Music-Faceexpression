@@ -103,6 +103,8 @@ async function loginUser(rrq, res){
     })
 
 }
-
+async function getMe(req,res){
+    const user = await userModel.findById(req.user.id)
+}
 
 module.exports = {registerUser, loginUser}
