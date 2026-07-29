@@ -115,7 +115,7 @@ async function getMe(req,res){
 
 async function logoutUser(req,res){
 
-    const token = res.cookies.token
+    const token = req.cookies.token;
 
     res.clearCookie("token")
 
