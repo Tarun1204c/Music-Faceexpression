@@ -13,7 +13,6 @@ async function authUser(req,res, next) {
 
     const isTokenBlacklisted = await blacklistModel.findOne({
         token
-
     })
 
     if(isTokenBlacklisted){
