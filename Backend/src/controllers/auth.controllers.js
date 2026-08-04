@@ -120,7 +120,7 @@ async function logoutUser(req,res){
 
     res.clearCookie("token")
 
-    await redis.set(token, Date.now(). toString())
+    await redis.set(token, Date.now(). toString(), "EX", 60 * 60)
 
     res.status(201).json({
         message: "Logout sucessfully"
