@@ -36,7 +36,7 @@ async function registerUser(req, res) {
     }, process.env.JWT_SECRET, 
        {
 
-           expiresIn: "3d"
+           expiresIn: "7d"
            
         }
     )
